@@ -2,8 +2,18 @@ const app = Vue.createApp({
   data() {
     return {
       counter: 0,
-      name: ''
+      name: '',
+      lastName: '',
     };
+  },
+  computed: {
+    fullname() {
+      console.log('Running...')
+      if (this.name === '') {
+        return '';
+      }
+      return this.name+ ' ' + this.lastName;
+    }
   },
   methods: {
     setName(event, lastName) {
@@ -17,8 +27,10 @@ const app = Vue.createApp({
       // this.counter--;
     },
     resetInput() {
-
+      this.name = ''
+      this.lastName = ''
     },
+    
   }
 });
 
