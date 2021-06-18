@@ -6,6 +6,7 @@
         <button>Delete</button>
       </header>
     </div>
+    
     <p>{{ description }}</p>
     <nav>
       <a :href="link">View resource</a>
